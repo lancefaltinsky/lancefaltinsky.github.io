@@ -18,25 +18,24 @@ body {
 .navbar .logo-container {
   display: flex;
   align-items: center;
+  margin-right: 0;
 }
 
 .navbar .logo {
   height: 30px;
-  margin-right: 10px;
 }
 
 .navbar .nav-links {
   display: flex;
   align-items: center;
   flex: 1; /* Allow the links to take available space */
-  overflow-x: auto; /* Enable horizontal scrolling if needed */
   -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
 }
 
 .navbar .nav-links a {
   color: #fff;
   text-decoration: none;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .navbar .thumbnail {
@@ -78,6 +77,8 @@ body {
 #header .text-content {
   flex: 1;
 }
+
+
 
 @media screen and (max-width: 700px) {
   #header {
@@ -194,7 +195,7 @@ body {
     position: relative;
     top: 100%;
     width: 100%;
-    padding: 20px;
+    padding: 0px;
     align-items: flex-start;
   }
 
@@ -226,7 +227,7 @@ body {
     transform: scale(1);
   }
   100% {
-    transform: scale(0.60);
+    transform: scale(0.80);
   }
 }
 
@@ -468,5 +469,44 @@ a:visited {
 
   .header-column {
     width: 100%;
+  }
+}
+
+.logo-container {
+  flex: 1; /* Allow the logo container to take available space */
+}
+
+.logo {
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
+}
+
+.logo-scaled {
+  transform: scale(0.8); /* Reduce the size of the logo */
+}
+
+.nav-links {
+  flex-grow: 2; /* Allow the nav links to take up more space */
+}
+
+.nav-links a {
+  margin-left: 10px; /* Reduce the margin for less space between links */
+}
+
+.hamburger {
+  display: none; /* Hide the hamburger menu by default */
+}
+
+@media screen and (max-width: 700px) {
+  .navbar .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: inline-block !important;
+    vertical-align: middle !important;
+    padding: 0 !important;
+    margin-left: auto !important;
   }
 }
