@@ -1,4 +1,3 @@
-/* General styles */
 body {
   background-color: #222 !important;
   color: #fff;
@@ -7,10 +6,8 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
-  overflow-x: hidden; /* Added this line */
 }
 
-/* Navbar styles */
 .navbar {
   display: flex;
   align-items: center;
@@ -28,24 +25,12 @@ body {
   margin-right: 10px;
 }
 
-.navbar .menu-btn {
-  display: none;
-  cursor: pointer;
-}
-
-.navbar .menu-btn span {
-  display: block;
-  width: 30px;
-  height: 3px;
-  background-color: #fff;
-  margin-bottom: 5px;
-  position: relative;
-  transition: transform 0.3s ease-in-out;
-}
-
 .navbar .nav-links {
   display: flex;
   align-items: center;
+  flex: 1; /* Allow the links to take available space */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
 }
 
 .navbar .nav-links a {
