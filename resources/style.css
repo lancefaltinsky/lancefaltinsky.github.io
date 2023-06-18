@@ -478,3 +478,15 @@ a:visited {
     display: block;
   }
 }
+
+@media screen and (max-width: 700px) {
+  .header-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header-column {
+    width: 100%;
+  }
+}
+
