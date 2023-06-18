@@ -359,8 +359,7 @@ a:visited {
   background-color: #444;
   color: #fff;
   text-decoration: none;
-  max-width: 800px;
-  max-height: 250px;
+  max-width: 600px;
   min-width: 300px;
   min-height: 100px;
   justify-content: space-between;
