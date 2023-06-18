@@ -7,6 +7,7 @@ body {
   line-height: 1.5;
   margin: 0;
   padding: 0;
+  overflow-x: hidden; /* Added this line */
 }
 
 /* Navbar styles */
@@ -71,6 +72,13 @@ body {
   padding: 50px;
 }
 
+#header .header-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
 #header img {
   height: 150px;
   width: 150px;
@@ -83,6 +91,26 @@ body {
   margin: 0;
 }
 
+#header .text-content {
+  flex: 1;
+}
+
+@media screen and (max-width: 700px) {
+  #header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #header .header-content {
+    flex-direction: column;
+  }
+
+  #header img {
+    margin-bottom: 20px;
+  }
+}
+
+
 #header p {
   font-size: 20px;
   margin: 0;
@@ -92,7 +120,7 @@ body {
 /* Skills section styles */
 .skills {
   padding: 40px;
-  margin-left: 10%;
+  margin-left: 5%;
 }
 
 .skills ul {
@@ -366,12 +394,6 @@ a:visited {
   margin-right: auto;
 }
 
-.experience-box-logo {
-  max-width: 30%;
-  filter: contrast(20%);
-  margin-left: 0;
-}
-
 .project-row {
   display: flex;
   flex-wrap: wrap;
@@ -435,6 +457,11 @@ a:visited {
 .experience-date{
   font-weight: 20;
   line-height: 10px;
+}
+
+.experience-box-logo {
+  filter: grayscale(100%) contrast(0) brightness(2);
+  max-width: 150px;
 }
 
 /* Media query for smaller screens */
