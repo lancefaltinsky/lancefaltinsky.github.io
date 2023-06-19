@@ -5,20 +5,22 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
-  padding: 0;
+  overflow-x: hidden;
 }
 
 .navbar {
   display: flex;
   align-items: center;
   background-color: #333;
-  padding: 10px 20px;
+  padding: 10px 10px 10px 20px;
+  position: fixed;
+  right: 0;
+  left: 0;
 }
 
 .navbar .logo-container {
-  display: flex;
+  display: block;
   align-items: center;
-  margin-right: 0;
 }
 
 .navbar .logo {
@@ -53,7 +55,7 @@ body {
 #header {
   display: flex;
   align-items: center;
-  padding: 50px;
+  padding: 100px 0px 0px 50px;
 }
 
 #header .header-content {
@@ -472,10 +474,9 @@ a:visited {
   }
 }
 
-.logo-container {
-  flex: 1; /* Allow the logo container to take available space */
+.logo-container{
+  margin-right: 20px;
 }
-
 .logo {
   height: 30px;
   margin-right: 10px;
