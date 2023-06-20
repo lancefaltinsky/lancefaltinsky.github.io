@@ -5,22 +5,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   margin: 0;
-  overflow-x: hidden;
 }
 
 .navbar {
   display: flex;
-  align-items: center;
   background-color: #333;
   padding: 10px 10px 10px 20px;
-  position: fixed;
-  right: 0;
-  left: 0;
+  align-items: center;
 }
 
 .navbar .logo-container {
-  display: block;
-  align-items: center;
+  display: flex;
+  justify-content: flex-start; /* Align elements to the left */
+  margin-right: 20px;
 }
 
 .navbar .logo {
@@ -30,14 +27,16 @@ body {
 .navbar .nav-links {
   display: flex;
   align-items: center;
-  flex: 1; /* Allow the links to take available space */
-  -webkit-overflow-scrolling: touch; /* Enable smooth scrolling on iOS devices */
+  flex: 1;
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .navbar .nav-links a {
+  display: flex; /* Display links as flex items */
+  align-items: center; /* Align icons and text vertically */
   color: #fff;
   text-decoration: none;
-  margin-left: 20px;
 }
 
 .navbar .thumbnail {
@@ -105,8 +104,7 @@ body {
 
 /* Skills section styles */
 .skills {
-  padding: 40px;
-  margin-left: 5%;
+  padding: 20px;
 }
 
 .skills ul {
@@ -144,15 +142,14 @@ body {
 
 @media screen and (max-width: 700px) {
   .hamburger {
-    display: inline-block !important;
-    vertical-align: middle !important;
+    display: flex;
     padding: 0 !important;
-    margin-left: auto !important;
+    align-items: center !important;
   }
 
   .hamburger--elastic-r {
     display: flex;
-    align-items: center;
+    padding-top: auto;
   }
 
   .hamburger-inner {
@@ -174,7 +171,6 @@ body {
   .navbar .menu-btn {
     display: flex;
     align-items: center;
-    margin-left: auto;
   }
 
   .navbar .menu-btn span {
@@ -194,16 +190,13 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #333;
-    position: relative;
-    top: 100%;
-    width: 100%;
-    padding: 0px;
     align-items: flex-start;
+    flex: 0 0 auto; /* Prevent the container from growing or shrinking */
   }
 
   .navbar .nav-links.active a {
-    margin-left: 0;
     margin-bottom: 10px;
+    width: 10%;
   }
 }
 
@@ -229,12 +222,13 @@ body {
     transform: scale(1);
   }
   100% {
-    transform: scale(0.80);
+    transform: scale(0.60);
   }
 }
 
 .logo-scaled {
   animation: logo-scale 0.2s ease-in-out forwards;
+  margin-left: -50px; /* Adjust the negative margin value as needed */
 }
 
 a:link,
@@ -416,7 +410,7 @@ a:visited {
   display: flex;
   justify-content: flex-start; /* Align the content to the left */
   align-items: center;
-  margin-right: 10px; /* Add some margin for spacing */
+  margin-right: 0px; /* Add some margin for spacing */
 }
 
 .experience-info {
@@ -474,25 +468,13 @@ a:visited {
   }
 }
 
-.logo-container{
-  margin-right: 20px;
-}
 .logo {
   height: 30px;
-  margin-right: 10px;
   transition: transform 0.3s ease-in-out; /* Add transition for smooth scaling */
 }
 
 .logo-scaled {
   transform: scale(0.8); /* Reduce the size of the logo */
-}
-
-.nav-links {
-  flex-grow: 2; /* Allow the nav links to take up more space */
-}
-
-.nav-links a {
-  margin-left: 10px; /* Reduce the margin for less space between links */
 }
 
 .hamburger {
@@ -506,8 +488,9 @@ a:visited {
 
   .hamburger {
     display: inline-block !important;
-    vertical-align: middle !important;
     padding: 0 !important;
     margin-left: auto !important;
+    align-items: center;
+    vertical-align: middle;
   }
 }
