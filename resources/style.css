@@ -1,12 +1,30 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+a:link,
+a:visited {
+  color: #4c95f0;
+  text-decoration: none;
+}
+
+
 body {
   background-color: #222 !important;
   color: #fff;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  margin: 0;
 }
 
+ul{
+  list-style-type: disc !important;
+}
+
+.maxwidthoverride{
+  max-width: 95% !important;
+}
 .navbar {
   display: flex;
   background-color: #333;
@@ -14,6 +32,10 @@ body {
   align-items: center;
 }
 
+.test{
+  background-color: #000;
+  color: #000 !important;
+}
 .navbar .logo-container {
   display: flex;
   justify-content: flex-start; /* Align elements to the left */
@@ -22,6 +44,11 @@ body {
 
 .navbar .logo {
   height: 30px;
+}
+
+.headshot{
+  max-width: 120px;
+  max-height: 120px;
 }
 
 .navbar .nav-links {
@@ -50,51 +77,22 @@ body {
   margin-right: 1px;
 }
 
-/* Header styles */
-#header {
-  display: flex;
-  align-items: center;
-  padding: 100px 0px 0px 50px;
-}
 
-#header .header-content {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}
 
 #header img {
   height: 150px;
   width: 150px;
   border-radius: 50%;
   margin-right: 50px;
+  margin-top: 30px;
 }
 
-#header h1 {
+.header {
+  display: inline !important;
   font-size: 36px;
-  margin: 0;
-}
-
-#header .text-content {
-  flex: 1;
 }
 
 
-
-@media screen and (max-width: 700px) {
-  #header {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  #header .header-content {
-    flex-direction: column;
-  }
-
-  #header img {
-    margin-bottom: 20px;
-  }
-}
 
 #header p {
   font-size: 20px;
@@ -209,13 +207,6 @@ body {
   color: white;
 }
 
-.carousel {
-  max-width: 80%;
-  margin-bottom: 30% !important;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-}
 
 @keyframes logo-scale {
   0% {
@@ -231,10 +222,8 @@ body {
   margin-left: -50px; /* Adjust the negative margin value as needed */
 }
 
-a:link,
-a:visited {
-  color: #3893FF;
-}
+
+
 
 .big-title {
   font-size: 50px;
@@ -280,20 +269,16 @@ a:visited {
   background-color: #444;
   color: #fff;
   text-decoration: none;
-  max-width: 150px;
+  max-width: 150px !important;
   max-height: 150px;
   min-width: 150px;
   min-height: 150px;
-  width: 100%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   padding: 20px;
   text-align: center;
   border-radius: 10px;
   color: #fff;
-  width: 300px;
+  margin-right: 10px;
+
 }
 
 .wrapper {
@@ -307,14 +292,18 @@ a:visited {
 }
 
 .skill-image {
-  max-width: 50px;
-  max-height: 50px;
-  min-width: 50px;
+  max-width: 65px;
+  max-height: 65px;
+  min-width: 40px;
   margin-left: auto;
   margin-right: auto;
   filter: invert(1);
   height: auto;
   margin-bottom: 10px;
+}
+
+.white{
+  color: white !important;
 }
 
 .skill-box-big {
@@ -335,13 +324,15 @@ a:visited {
   text-align: center;
 }
 
+.no-overflow{
+  overflow-x: auto
+}
+
+
 .experience-box {
   background-color: #444;
   color: #fff;
-  text-decoration: none;
-  max-width: 600px;
-  min-width: 300px;
-  min-height: 100px;
+  text-decoration: none !important;
   justify-content: space-between;
   padding: 20px;
   border-radius: 10px;
@@ -349,7 +340,16 @@ a:visited {
   text-align: center;
   display: flex;
   align-items: center;
-  margin-top: 20px;
+  margin-top:10px;
+
+}
+
+.experience-company-title {
+  text-align: left;
+  font-size: 30px !important;
+  font-weight: 700;
+  margin: 0 !important;
+  line-height: 40px;
 }
 
 .skill-desc {
@@ -362,6 +362,7 @@ a:visited {
 
 .no-underline {
   text-decoration: none;
+  color: #4c95f0 !important;
 }
 
 .project-image {
@@ -376,18 +377,8 @@ a:visited {
 .project-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
-  overflow-wrap: break-word; /* Added this line */
 }
 
-.experience-company-title {
-  text-align: left;
-  font-size: 30px !important;
-  color: #eee;
-  font-weight: 700;
-  margin: 0 !important;
-  line-height: 40px;
-}
 
 .experience-company-position {
   text-align: left;
@@ -448,13 +439,7 @@ a:visited {
 
 /* Media query for smaller screens */
 @media screen and (max-width: 700px) {
-  .experience-column {
-    flex-basis: 100%;
-  }
 
-  .experience-bullets br {
-    display: block;
-  }
 }
 
 @media screen and (max-width: 700px) {

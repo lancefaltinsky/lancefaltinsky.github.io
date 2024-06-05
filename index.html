@@ -13,19 +13,16 @@
   <meta property="og:image" content="https://www.example.com/resources/headshot.png">
   <meta property="og:image:alt" content="My Photo">
   <link rel="stylesheet" href="resources/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link href="resources/hamburgers.css" rel="stylesheet">
   <link rel="icon" href="resources/icons/favico.ico" type="image/x-icon">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="logo-container">
+  <nav class="navbar mb-2">
+    <div class="logo-container mx-3">
       <img id="logo-animated" class="logo" src="resources/logo.png" alt="Lance Faltinsky">
     </div>
     <div class="nav-links">
-      <a href="#">
-        <img class="thumbnail-invert" src="./resources/icons/home.svg" alt="Home">
-        Home
-      </a>
       <a href="#">
         <img class="thumbnail-invert" src="./resources/icons/linkedin.svg" alt="LinkedIn">
         LinkedIn
@@ -34,7 +31,7 @@
         <img class="thumbnail-invert" src="./resources/icons/resume.svg" alt="Resume">
         Resume
       </a>
-      <a href="https://github.com/lancefaltinsky">
+      <a href="https://github.com/lancefaltinsky" class="white">
         <img class="thumbnail-invert" src="./resources/icons/github.svg" alt="GitHub">
         GitHub
       </a>
@@ -46,173 +43,198 @@
     </div>
   </nav>
 
-  <header id="header">
-    <div class="header-content">
-      <div class="header-column">
-        <img src="./resources/headshot.png" alt="My Photo" class="header-image">
+  <div class="row d-flex justify-content-center mw0">
+    <div class="col-3 col-xs-4 col-sm-5 col-md-3 col-lg-2 col-xl-2 col-xxl-1 d-inline align-self-center">
+      <img src="./resources/headshot.png" alt="Lance headshot" class="rounded-circle headshot">
+    </div>
+    <div class="col-10 col-xs-12 col-md-6 col-lg-6 gy-3 p-3 text-white">
+      <h1>Hello,</h1>
+      I'm Lance, a 23-year-old programmer proficient in Python, Java, Lua, and many other frameworks and libraries.
+      I have a B.S. of Computer Science from Mercy College, and I've been programming since the age of 12.
+      I'm currently employed as a full-time dispatcher at Kraft Kennedy.
+      In my free time, I automate my day with scripting, and I also play with circuitry, pilot drones, photograph nature, play video games, and enjoy working on cars.
+      One word to describe me would be diverse.
+      If you're interested in what I can offer you, let's connect!
+    </div>
+  </div>
+
+  <div class="container-fluid text-white maxwidthoverride align-self-center">
+    <div class="row gx-lg-5">
+      <div class="col-xs-12 col-md-12 col-lg-12 col-xl-6">
+        <h1 class="header extramargin">Experience</h1>
+            <div class="experience-box">
+              <div class="experience-column">
+                <div class="experience-logo-container">
+                  <img src="resources/kraftkennedy.png" alt="Kraft Kennedy logo" class="experience-box-logo">
+                </div>
+                <div class="experience-info">
+                  <a href='https://www.kraftkennedy.com/' class="no-underline">
+                    <h3 class="experience-company-title">Kraft Kennedy</h3>
+                  </a>
+                  <h2 class="experience-company-position">Dispatcher</h2>
+                  <p class="experience-date">06/2021 - Present</p>
+                </div>
+              </div>
+              <div class="experience-column">
+                <div class="experience-bullets">
+                  <ul>
+                    <li>Answered client phone calls and queries, documenting user issues into new tickets</li>
+                    <li>Assigned, triaged, and managed the flow of support tickets within ConnectWise Manage</li>
+                    <li>Closely worked with engineers to schedule and manage work throughout the day</li>
+                    <li>Provided guidance and training to engineers on Dispatch/ticket-related topics</li>
+                    <li>Coordinated with the afternoon shift to implement and formalize procedures used by the day shift</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+            <div class="experience-box">
+              <div class="experience-column">
+                <div class="experience-logo-container">
+                    <img src="resources/mercycollege.png" alt="Mercy College logo" class="experience-box-logo">
+                </div>
+                <div class="experience-info">
+                  <a href='https://mercy.edu/' class="no-underline">
+                    <h3 class="experience-company-title">Mercy College</h3>
+                  </a>
+                  <h2 class="experience-company-position">Technical Support Agent - Audio Visual Technician</h2>
+                  <p class="experience-date">2019-2021</p>
+                </div>
+              </div>
+              <div class="experience-column">
+                <div class="experience-bullets">
+                  <ul>
+                    <li>Assisted users and resolved problems both in-person and via email or phone call</li>
+                    <li>Created, modified, and managed tickets within ServiceNow</li>
+                    <li>Performed daily “walk-throughs” of rooms across campus to ensure the technology was properly functioning</li>
+                    <li>Diagnosed, repaired, monitored, and installed various educational technologies around campus</li>
+                </ul>
+                </div>
+              </div>
+            </div>
       </div>
-      <div class="header-column">
-        <div class="header-text">
-          <h1>Hello</h1>
-          <p>I'm Lance, a 23-year-old programmer proficient in Python, Java, Lua, and many other frameworks and libraries.</p>
-          <p>I have a B.S. of Computer Science from Mercy College, and I've been programming since the age of 12.</p>
-          <p>I'm currently employed as a full-time dispatcher at <a href="https://www.kraftkennedy.com/">Kraft Kennedy</a>.</p>
-          <p>In my free time, I automate my day with scripting, and I also play with circuitry, pilot drones, photograph nature, play video games, and enjoy working on cars.</p>
-          <p>One word to describe me would be <b>diverse</b>.</p>
-          <p>If you're interested in what I can offer you, let's connect!</p>
+      <div class="col-xs-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
+        <h1 class="header">Skills</h1>
+        <div class="align-items-center">
+          <div class="row mt-1 gx-3 gy-2">
+            <div class="skill-box col">
+              <h3>Python</h3>
+              <img src="resources/icons/python.svg" alt="Python logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>Java</h3>
+              <img src="resources/icons/java.svg" alt="Java logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>Lua</h3>
+                <img src="resources/icons/lua.png" alt="Lua logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>SQL</h3>
+                <img src="resources/icons/database.svg" alt="SQL logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>Windows</h3>
+                <img src="resources/windows.png" alt="Windows logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>Linux</h3>
+                <img src="resources/linux.png" alt="Linux logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>HTML</h3>
+              <img src="resources/icons/html5.svg" alt="HTML5 logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>CSS</h3>
+                <img src="resources/icons/css3.svg" alt="CSS logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>Git</h3>
+                <img src="resources/icons/github.svg" alt="Git logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>ServiceNow</h3>
+                <img src="resources/servicenow.png" alt="ServiceNow logo" class="skill-image">
+            </div>
+            <div class="skill-box col">
+              <h3>ConnectWise</h3>
+                <img src="resources/connectwise.png" alt="ConnectWise logo" class="skill-image">
+            </div>
+            <h1 class="header">Projects</h1>
+              <div class="experience-box">
+                <div class="experience-column px-4"">
+                  <div class="experience-logo-container">
+                      <img src="resources/plane.png" alt="Plane" class="experience-box-logo">
+                  </div>
+                  <div class="experience-info">
+                    <a href="https://github.com/lancefaltinsky/airport_watch">
+                      <h3 class="experience-company-title">Airport Watch</h3>
+                    </a>
+                  </div>
+                </div>
+                <div class="experience-column px-4">
+                  <div class="experience-bullets">
+                    <ul>
+                      <li>A Python tool for notifying of departing and arriving flights from airports</li>
+                      <li>Sends notifications to mobile devices to alert of any flights, making plane-watching easy</li>
+                      <li>Utilizes the <a href="https://www.flightaware.com/">FlightAware</a> API for flight data and <a href="https://pushover.net/">Pushover</a> for notifications across devices</li>
+                  </ul>
+                  </div>
+                </div>
+              </div>
+            <div class="experience-box">
+              <div class="experience-column px-4">
+                <div class="experience-logo-container">
+                    <img src="resources/dial.png" alt="Dial" class="experience-box-logo">
+                </div>
+                <div class="experience-info">
+                  <a href="https://github.com/lancefaltinsky/thermomate">
+                    <h3 class="experience-company-title">Thermomate</h3>
+                </a>
+                </div>
+              </div>
+              <div class="experience-column">
+                <div class="experience-bullets">
+                  <ul>
+                    <li>A program written in Python to control Wyze thermostats</li>
+                    <li>Uses Tkinter for a user interface, and the Python <a href="https://pypi.org/project/wyze-sdk/"> Wyze SDK library</a></li>
+                </ul>
+                </div>
+              </div>
+            </div>
+
+            <div class="experience-box">
+              <div class="experience-column px-4">
+                <div class="experience-logo-container">
+                    <img src="resources/logo.png" alt="Dial" class="experience-box-logo">
+                </div>
+                <div class="experience-info">
+                  <a href="https://github.com/lancefaltinsky/thermomate">
+                    <h3 class="experience-company-title">Lance.software</h3>
+                  </a>
+                </div>
+              </div>
+              <div class="experience-column">
+                <div class="experience-bullets">
+                  <ul>
+                    <li>The website you are viewing right now</li>
+                    <li>Static site utilizing HTML, CSS, and JS</li>
+                    <li>Hosted on Github Pages</li>
+                </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>          
         </div>
       </div>
-    </div>
-  </header>
+      <div class="my-5"></div>
+  </div>
 
-  <section class="skills">
-    <h1 class="big-title">Experience</h1>
-    <div class="project-row">
-      <a href='https://www.kraftkennedy.com/' class="no-underline">
-        <div class="experience-box">
-          <div class="experience-column">
-            <div class="experience-logo-container">
-              <img src="resources/kraftkennedy.png" alt="Kraft Kennedy logo" class="experience-box-logo">
-            </div>
-            <div class="experience-info">
-              <h3 class="experience-company-title">Kraft Kennedy</h3>
-              <h2 class="experience-company-position">Dispatcher</h2>
-              <p class="experience-date">06/2021 - Present</p>
-            </div>
-          </div>
-          <div class="experience-column">
-            <div class="experience-bullets">
-              <ul>
-                <li>• Created, categorized, managed, and assigned service tickets to engineers</li>
-                <li>• Answered client phone calls and queries about tickets</li>
-                <li>• Checked and followed up on pending tickets</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
 
-    <div class="project-row">
-      <a href='https://mercy.edu/' class="no-underline">
-        <div class="experience-box">
-          <div class="experience-column">
-            <div class="experience-logo-container">
-              <img src="resources/mercycollege.png" alt="Mercy College logo" class="experience-box-logo">
-            </div>
-            <div class="experience-info">
-              <h3 class="experience-company-title">Mercy College</h3>
-              <h2 class="experience-company-position">Junior Audio-Visual technician</h2>
-              <p class="experience-date">10/2019 - 06/2021</p>
-            </div>
-          </div>
-          <div class="experience-column">
-            <div class="experience-bullets">
-              <ul>
-                <li>• Diagnosed, installed, and repaired user systems around campus</li>
-                <li>• Performed daily equipment checks on classrooms throughout campus</li>
-                <li>• Monitored and replaced printer toner and paper</li>
-                <li>• Set up and moved user equipment to new rooms</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
 
-  <section class="skills">
-    <h1 class="big-title">Notable open-source projects</h1>
-    <div class="project-row">
-      <a href='https://github.com/lancefaltinsky/lancefaltinsky.github.io' class="no-underline">
-        <div class="skill-box-big">
-          <h3>lance.software</h3>
-          <p class="skill-desc">Source code for this website.</p>
-          <img src="resources/pageslogo.png" alt="Python logo" class="project-image">
-          <div class="progress-container">
-            <p class="progress-label">Progress:</p>
-            <progress class="progress-bar" value="100" max="100"></progress>
-          </div>
-        </div>
-      </a>
-    
-      <a href='https://github.com/lancefaltinsky/airport_watch' class="no-underline">
-        <div class="skill-box-big">
-          <h3>airportWatch</h3>
-          <p class="skill-desc">Aviation enthusiast airport arrival and departure notifier.</p>
-          <img src="resources/airportwatchlogo.png" alt="Python logo" class="project-image">
-          <div class="progress-container">
-            <p class="progress-label">Progress:</p>
-            <progress class="progress-bar" value="100" max="100"></progress>
-          </div>
-        </div>
-      </a>
 
-      <a href='https://github.com/lancefaltinsky/Thermomate' class="no-underline">
-        <div class="skill-box-big">
-          <h3>Thermomate</h3>
-          <p class="skill-desc">Tkinter GUI to control Wyze thermostats.</p>
-          <img src="resources/dial.png" alt="Python logo" class="project-image">
-          <div class="progress-container">
-            <p class="progress-label">Progress:</p>
-            <progress class="progress-bar" value="40" max="100"></progress>
-          </div>
-        </div>
-      </a>
-    </div>
-  </section>
 
-  <section class="skills">
-    <h1 class="big-title">Languages</h1>
-    <div class="skill-row">
-      <div class="skill-box">
-        <h3>Python</h3>
-        <img src="resources/icons/python.svg" alt="Python logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="90" max="100"></progress></p>
-      </div>
-      <div class="skill-box">
-        <h3>Java</h3>
-        <img src="resources/icons/java.svg" alt="Java logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="50" max="100"></progress></p>
-      </div>
-      <div class="skill-box">
-        <h3>Lua</h3>
-        <img src="resources/icons/lua.png" alt="Lua logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="90" max="100"></progress></p>
-      </div>
-      <div class="skill-box">
-        <h3>CSS</h3>
-        <img src="resources/icons/css3.svg" alt="CSS logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="50" max="100"></progress></p>
-      </div>
-      <div class="skill-box">
-        <h3>HTML5</h3>
-        <img src="resources/icons/html5.svg" alt="HTML5 logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="50" max="100"></progress></p>
-      </div>
-      <div class="skill-box">
-        <h3>SQL</h3>
-        <img src="resources/icons/database.svg" alt="HTML5 logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="50" max="100"></progress></p>
-      </div>
-    </div>
-  </section>
-
-  <section class="skills">
-    <h1 class="big-title">Skills</h1>
-    <div class="skill-row">
-      <div class="skill-box">
-        <h3>Git</h3>
-        <img src="resources/icons/python.svg" alt="Python logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="90" max="100"></progress></p>
-      </div>
-      <div class="skill-box">
-        <h3>Java</h3>
-        <img src="resources/icons/java.svg" alt="Java logo" class="skill-image">
-        <p class="skill-desc">Proficiency:<br><progress class="progress-bar" value="50" max="100"></progress></p>
-      </div>
-    </div>
-  </section>
 
   <script>
     // Paste the JavaScript code here
