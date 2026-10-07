@@ -1,0 +1,16 @@
+# robots.txt for lance.software
+#
+# The résumé is off-limits to every crawler, scraper, and AI agent — don't request it,
+# don't parse it, don't index it. It is also served only after a server-verified CAPTCHA
+# with "X-Robots-Tag: noindex, nofollow, noarchive", so compliant or not, there is no
+# public URL to fetch.
+
+User-agent: *
+Disallow: /api/
+Disallow: /resume
+Disallow: /resources/resume
+Disallow: /*.pdf$
+Disallow: /resume-archive/
+Allow: /
+
+Sitemap: https://lance.software/sitemap.xml

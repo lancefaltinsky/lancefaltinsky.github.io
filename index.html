@@ -1,262 +1,364 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang="en">
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Lance Faltinsky</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Personal website of Lance Faltinsky">
-  <meta name="keywords" content="Lance Faltinsky, programmer, Python, Java, software development">
+  <meta name="description" content="Lance Faltinsky — IT service desk professional and dispatcher who automates service desk work with Python, JavaScript, and AI-assisted development.">
   <meta name="author" content="Lance Faltinsky">
+  <meta name="theme-color" content="#05060f">
+  <meta name="color-scheme" content="dark">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- GitHub Pages can't set response headers, so the CSP lives here. -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/ https://www.recaptcha.net/recaptcha/ https://challenges.cloudflare.com https://static.cloudflareinsights.com;
+    frame-src https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://www.recaptcha.net/recaptcha/ https://challenges.cloudflare.com blob:;
+    connect-src 'self' https://cloudflareinsights.com https://www.google.com/recaptcha/;
+    img-src 'self' data: blob:;
+    style-src 'self' 'unsafe-inline';
+    font-src 'self';
+    object-src blob:;
+    base-uri 'self';
+    form-action 'none';
+    upgrade-insecure-requests">
+
   <meta property="og:title" content="Lance Faltinsky">
-  <meta property="og:description" content="Portfolio of programmer Lance Faltinsky">
+  <meta property="og:description" content="IT service desk, dispatch, and automation — portfolio of Lance Faltinsky">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lance.software">
-  <meta property="og:image" content="resources/icons/favico.ico">
-  <meta property="og:image:alt" content="Website abbreviation logo">
-  <link rel="stylesheet" href="resources/style.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-  <link href="resources/hamburgers.css" rel="stylesheet">
+  <meta property="og:url" content="https://lance.software/">
+  <meta property="og:image" content="https://lance.software/resources/headshot.png">
+  <meta property="og:image:alt" content="Lance Faltinsky">
+  <meta name="twitter:card" content="summary">
+  <link rel="canonical" href="https://lance.software/">
   <link rel="icon" href="resources/icons/favico.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" href="resources/headshot.png">
+
+  <link rel="stylesheet" href="assets/css/site.css">
+  <!-- Tiny blocking script: flags JS support before first paint so reveal states don't flash. -->
+  <script src="assets/js/boot.js"></script>
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/galaxy.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
 </head>
 <body>
-  <nav class="navbar mb-2">
-    <div class="logo-container mx-3">
-      <img id="logo-animated" class="logo" src="resources/logo.png" alt="Lance Faltinsky">
-    </div>
-    <div class="nav-links">
-      <a href="#">
-        <img class="thumbnail-invert" src="./resources/icons/linkedin.svg" alt="LinkedIn">
-        LinkedIn
+  <a class="skip-link" href="#about">Skip to content</a>
+
+  <!-- Background: nebula gradients + WebGL particle galaxy -->
+  <div class="space" aria-hidden="true">
+    <div class="nebula"></div>
+    <canvas id="galaxy"></canvas>
+    <div class="vignette"></div>
+  </div>
+
+  <!-- Floating glass nav -->
+  <header class="nav-wrap">
+    <nav class="nav glass glass--pill" aria-label="Primary">
+      <a class="nav__brand" href="#top" aria-label="Lance Faltinsky — back to top">
+        <img src="resources/logo.png" alt="lance.faltinsky()" width="1514" height="155">
       </a>
-      <a href="./resources/resume.pdf">
-        <img class="thumbnail-invert" src="./resources/icons/resume.svg" alt="Resume">
-        Resume
-      </a>
-      <a href="https://github.com/lancefaltinsky" class="white">
-        <img class="thumbnail-invert" src="./resources/icons/github.svg" alt="GitHub">
-        GitHub
-      </a>
-    </div>
-    <div class="hamburger hamburger--elastic" tabindex="0" aria-label="Menu" role="button" aria-controls="navigation">
-      <div class="hamburger-box">
-        <div class="hamburger-inner"></div>
+      <ul class="nav__links">
+        <li><a href="#about" data-nav="about">About</a></li>
+        <li><a href="#experience" data-nav="experience">Experience</a></li>
+        <li><a href="#skills" data-nav="skills">Skills</a></li>
+        <li><a href="#projects" data-nav="projects">Projects</a></li>
+      </ul>
+      <div class="nav__actions">
+        <a class="icon-btn" href="https://github.com/lancefaltinsky" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        </a>
+        <a class="icon-btn" data-linkedin href="#contact" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></svg>
+        </a>
+        <button class="btn btn--glass btn--sm" type="button" data-open-resume>Resume</button>
       </div>
-    </div>
+    </nav>
+  </header>
+
+  <!-- Section dots (Apple-style progress rail) -->
+  <nav class="rail" aria-label="Sections">
+    <ol>
+      <li><a href="#top" data-rail="top" aria-label="Intro"></a></li>
+      <li><a href="#about" data-rail="about" aria-label="About"></a></li>
+      <li><a href="#experience" data-rail="experience" aria-label="Experience: Kraft Kennedy"></a></li>
+      <li><a href="#dispatch-script" data-rail="dispatch-script" aria-label="Featured: Dispatch Master Script"></a></li>
+      <li><a href="#experience-mercy" data-rail="experience-mercy" aria-label="Experience: Mercy College"></a></li>
+      <li><a href="#skills" data-rail="skills" aria-label="Skills"></a></li>
+      <li><a href="#projects" data-rail="projects" aria-label="Projects"></a></li>
+      <li><a href="#contact" data-rail="contact" aria-label="Contact"></a></li>
+    </ol>
   </nav>
 
-  <div class="row d-flex justify-content-center mw0">
-    <div class="col-3 col-xs-4 col-sm-5 col-md-3 col-lg-2 col-xl-2 col-xxl-1 d-inline align-self-center">
-      <img src="./resources/headshot.png" alt="Lance headshot" class="rounded-circle headshot">
-    </div>
-    <div class="col-10 col-xs-12 col-md-6 col-lg-6 gy-3 p-3 text-white">
-      <h1>Hello,</h1>
-      I'm Lance, a 25-year-old programmer proficient in Python, Java, Lua, and many other frameworks and libraries.
-      I have a B.S. of Computer Science from Mercy College, and I've been programming since the age of 12.
-      I'm currently employed as a full-time dispatcher at Kraft Kennedy.
-      In my free time, I automate my day with scripting, and I also play with circuitry, pilot drones, photograph nature, play video games, and enjoy working on cars.
-      One word to describe me would be diverse.
-      If you're interested in what I can offer you, let's connect!
-    </div>
-  </div>
+  <main id="scenes">
 
-  <div class="container-fluid text-white maxwidthoverride align-self-center">
-    <div class="row gx-lg-5">
-      <div class="col-xs-12 col-md-12 col-lg-12 col-xl-6">
-        <h1 class="header extramargin">Experience</h1>
-            <div class="experience-box">
-              <div class="experience-column">
-                <div class="experience-logo-container">
-                  <img src="resources/kraftkennedy.png" alt="Kraft Kennedy logo" class="experience-box-logo">
-                </div>
-                <div class="experience-info">
-                  <a href='https://www.kraftkennedy.com/' class="no-underline">
-                    <h3 class="experience-company-title">Kraft Kennedy</h3>
-                  </a>
-                  <h2 class="experience-company-position">Dispatcher</h2>
-                  <p class="experience-date">06/2021 - Present</p>
-                </div>
-              </div>
-              <div class="experience-column">
-                <div class="experience-bullets">
-                  <ul>
-                    <li>Answered client phone calls and queries, documenting user issues into new tickets</li>
-                    <li>Assigned, triaged, and managed the flow of support tickets within ConnectWise Manage</li>
-                    <li>Closely worked with engineers to schedule and manage work throughout the day</li>
-                    <li>Provided guidance and training to engineers on Dispatch/ticket-related topics</li>
-                    <li>Coordinated with the afternoon shift to implement and formalize procedures used by the day shift</li>
-                </ul>
-                </div>
-              </div>
+    <!-- 1 · Hero -->
+    <section class="scene scene--hero" id="top" data-scene="top">
+      <div class="stage">
+        <div class="hero">
+          <div class="hero__avatar reveal" style="--d:0">
+            <div class="avatar-ring glass">
+              <img src="resources/headshot.png" alt="Lance Faltinsky" width="500" height="500">
             </div>
-            <div class="experience-box">
-              <div class="experience-column">
-                <div class="experience-logo-container">
-                    <img src="resources/mercycollege.png" alt="Mercy College logo" class="experience-box-logo">
-                </div>
-                <div class="experience-info">
-                  <a href='https://mercy.edu/' class="no-underline">
-                    <h3 class="experience-company-title">Mercy College</h3>
-                  </a>
-                  <h2 class="experience-company-position">Technical Support Agent - Audio Visual Technician</h2>
-                  <p class="experience-date">2019-2021</p>
-                </div>
-              </div>
-              <div class="experience-column">
-                <div class="experience-bullets">
-                  <ul>
-                    <li>Assisted users and resolved problems both in-person and via email or phone call</li>
-                    <li>Created, modified, and managed tickets within ServiceNow</li>
-                    <li>Performed daily “walk-throughs” of rooms across campus to ensure the technology was properly functioning</li>
-                    <li>Diagnosed, repaired, monitored, and installed various educational technologies around campus</li>
-                </ul>
-                </div>
-              </div>
-            </div>
-      </div>
-      <div class="col-xs-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
-        <h1 class="header">Skills</h1>
-        <div class="align-items-center">
-          <div class="row mt-1 gx-3 gy-2">
-            <div class="skill-box col">
-              <h3>Python</h3>
-              <img src="resources/icons/python.svg" alt="Python logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>Java</h3>
-              <img src="resources/icons/java.svg" alt="Java logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>Lua</h3>
-                <img src="resources/icons/lua.png" alt="Lua logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>SQL</h3>
-                <img src="resources/icons/database.svg" alt="SQL logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>Windows</h3>
-                <img src="resources/windows.png" alt="Windows logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>Linux</h3>
-                <img src="resources/linux.png" alt="Linux logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>HTML</h3>
-              <img src="resources/icons/html5.svg" alt="HTML5 logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>CSS</h3>
-                <img src="resources/icons/css3.svg" alt="CSS logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>Git</h3>
-                <img src="resources/icons/github.svg" alt="Git logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>ServiceNow</h3>
-                <img src="resources/servicenow.png" alt="ServiceNow logo" class="skill-image">
-            </div>
-            <div class="skill-box col">
-              <h3>ConnectWise</h3>
-                <img src="resources/connectwise.png" alt="ConnectWise logo" class="skill-image">
-            </div>
-            <h1 class="header">Projects</h1>
-              <div class="experience-box">
-                <div class="experience-column px-4"">
-                  <div class="experience-logo-container">
-                      <img src="resources/plane.png" alt="Plane" class="experience-box-logo">
-                  </div>
-                  <div class="experience-info">
-                    <a href="https://github.com/lancefaltinsky/airport_watch">
-                      <h3 class="experience-company-title">Airport Watch</h3>
-                    </a>
-                  </div>
-                </div>
-                <div class="experience-column px-4">
-                  <div class="experience-bullets">
-                    <ul>
-                      <li>A Python tool for notifying of departing and arriving flights from airports</li>
-                      <li>Sends notifications to mobile devices to alert of any flights, making plane-watching easy</li>
-                      <li>Utilizes the <a href="https://www.flightaware.com/">FlightAware</a> API for flight data and <a href="https://pushover.net/">Pushover</a> for notifications across devices</li>
-                  </ul>
-                  </div>
-                </div>
-              </div>
-            <div class="experience-box">
-              <div class="experience-column px-4">
-                <div class="experience-logo-container">
-                    <img src="resources/dial.png" alt="Dial" class="experience-box-logo">
-                </div>
-                <div class="experience-info">
-                  <a href="https://github.com/lancefaltinsky/thermomate">
-                    <h3 class="experience-company-title">Thermomate</h3>
-                </a>
-                </div>
-              </div>
-              <div class="experience-column">
-                <div class="experience-bullets">
-                  <ul>
-                    <li>A program written in Python to control Wyze thermostats</li>
-                    <li>Uses Tkinter for a user interface, and the Python <a href="https://pypi.org/project/wyze-sdk/"> Wyze SDK library</a></li>
-                </ul>
-                </div>
-              </div>
-            </div>
-
-            <div class="experience-box">
-              <div class="experience-column px-4">
-                <div class="experience-logo-container">
-                    <img src="resources/logo.png" alt="Dial" class="experience-box-logo">
-                </div>
-                <div class="experience-info">
-                  <a href="https://github.com/lancefaltinsky/thermomate">
-                    <h3 class="experience-company-title">Lance.software</h3>
-                  </a>
-                </div>
-              </div>
-              <div class="experience-column">
-                <div class="experience-bullets">
-                  <ul>
-                    <li>The website you are viewing right now</li>
-                    <li>Static site utilizing HTML, CSS, and Javascript</li>
-                    <li>Hosted on Github Pages</li>
-                </ul>
-                </div>
-              </div>
-            </div>
-
-          </div>          
+          </div>
+          <p class="eyebrow reveal" style="--d:1">IT Service Desk · Dispatch · Automation</p>
+          <h1 class="display reveal" style="--d:2">Lance <span class="grad">Faltinsky</span></h1>
+          <p class="lede reveal" style="--d:3">
+            A <span data-age>26</span>-year-old IT service desk professional who automates
+            dispatch work with Python, JavaScript, and AI-assisted development.
+          </p>
+          <div class="hero__cta reveal" style="--d:4">
+            <a class="btn btn--primary" href="#projects">See my work</a>
+            <button class="btn btn--glass" type="button" data-open-resume>View résumé</button>
+          </div>
         </div>
       </div>
-      <div class="my-5"></div>
+      <a class="scroll-cue reveal" style="--d:6" href="#about" aria-label="Scroll to About">
+        <span class="scroll-cue__mouse"><span></span></span>
+        <span class="scroll-cue__label">Scroll</span>
+      </a>
+    </section>
+
+    <!-- 2 · About -->
+    <section class="scene" id="about" data-scene="about">
+      <div class="stage">
+        <div class="about">
+          <p class="eyebrow reveal" style="--d:0">About me</p>
+          <h2 class="headline reveal" style="--d:1">Building things since I was <span class="grad">twelve.</span></h2>
+          <div class="glass card about__card reveal" style="--d:2">
+            <p>
+              I'm a remote dispatcher at Kraft Kennedy, an IT consulting firm, with a B.S. in Computer
+              Science from Mercy College. In my free time I automate my day with scripting, play with
+              circuitry, pilot drones, photograph nature, play video games, and work on cars.
+            </p>
+            <ul class="chips" aria-label="Interests">
+              <li class="chip">Automation</li>
+              <li class="chip">Circuitry</li>
+              <li class="chip">Drones</li>
+              <li class="chip">Nature photography</li>
+              <li class="chip">Gaming</li>
+              <li class="chip">Cars</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 · Experience: Kraft Kennedy -->
+    <section class="scene" id="experience" data-scene="experience">
+      <div class="stage">
+        <article class="job">
+          <p class="eyebrow reveal" style="--d:0">Experience · Now</p>
+          <div class="glass card job__card reveal" style="--d:1">
+            <header class="job__head">
+              <img class="job__logo" src="resources/kraftkennedy.png" alt="Kraft Kennedy" width="208" height="97">
+              <div>
+                <h2 class="job__company"><a href="https://www.kraftkennedy.com/" target="_blank" rel="noopener noreferrer">Kraft Kennedy</a></h2>
+                <p class="job__role">Dispatcher · Remote</p>
+                <p class="job__dates">Jun 2021 — Present · <span data-tenure="2021-06">5 yrs</span></p>
+              </div>
+            </header>
+            <ul class="job__bullets">
+              <li class="reveal" style="--d:2">Triage, prioritize, and assign 100–150 support tickets a day in ConnectWise Manage to meet client SLAs</li>
+              <li class="reveal" style="--d:3">Schedule and coordinate daily work for ~70 engineers across remote, on-site, and time-off coverage</li>
+              <li class="reveal" style="--d:4">First point of contact for client calls and emails, turning reported issues into clear, actionable tickets</li>
+              <li class="reveal" style="--d:5">Built <a href="#dispatch-script">Dispatch Master Script</a>, a ConnectWise Manage tool now used by the whole dispatch team</li>
+              <li class="reveal" style="--d:6">Train engineers on dispatch procedures; standardized and documented day-shift processes with the afternoon shift</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 4 · Featured: Dispatch Master Script -->
+    <section class="scene" id="dispatch-script" data-scene="dispatch-script">
+      <div class="stage">
+        <div class="feature">
+          <p class="eyebrow reveal" style="--d:0">Featured · Built at Kraft Kennedy</p>
+          <h2 class="headline reveal" style="--d:1">Dispatch Master <span class="grad">Script</span></h2>
+          <p class="lede feature__lede reveal" style="--d:2">
+            A ConnectWise Manage add-on that the whole dispatch team runs every day.
+          </p>
+          <div class="glass card feature__card reveal" style="--d:3">
+            <ul class="feature__grid">
+              <li class="reveal" style="--d:4">
+                <h3>SLA tracking</h3>
+                <p>Color-codes the ticket board by SLA status and adds countdowns to every ticket.</p>
+              </li>
+              <li class="reveal" style="--d:5">
+                <h3>Alerts</h3>
+                <p>Audio and tab-flash alerts for new tickets and tickets close to breaching SLA.</p>
+              </li>
+              <li class="reveal" style="--d:6">
+                <h3>One-click triage</h3>
+                <p>Buttons that set board, status, type, and priority in one step, plus AI ticket summaries.</p>
+              </li>
+              <li class="reveal" style="--d:7">
+                <h3>Scheduling tools</h3>
+                <p>Technician search, an open-slot finder, and automatic time-off and on-site tallies.</p>
+              </li>
+            </ul>
+            <p class="feature__note reveal" style="--d:8">
+              ~3,800 lines of JavaScript (Tampermonkey). Built with Claude and GitHub Copilot,
+              on top of in-depth ConnectWise Manage knowledge and HTML/CSS/web design skills.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 · Experience: Mercy College -->
+    <section class="scene" id="experience-mercy" data-scene="experience-mercy">
+      <div class="stage">
+        <article class="job">
+          <p class="eyebrow reveal" style="--d:0">Experience · 2019 — 2021</p>
+          <div class="glass card job__card reveal" style="--d:1">
+            <header class="job__head">
+              <img class="job__logo" src="resources/mercycollege.png" alt="Mercy College" width="500" height="189">
+              <div>
+                <h2 class="job__company"><a href="https://mercy.edu/" target="_blank" rel="noopener noreferrer">Mercy College</a></h2>
+                <p class="job__role">Technical Support Agent · Audio Visual Technician</p>
+                <p class="job__dates">2019 — 2021</p>
+              </div>
+            </header>
+            <ul class="job__bullets">
+              <li class="reveal" style="--d:2">Resolved hardware, software, and A/V issues for students, faculty, and staff in person, by phone, and by email</li>
+              <li class="reveal" style="--d:3">Created, updated, and closed support tickets in ServiceNow</li>
+              <li class="reveal" style="--d:4">Performed daily campus-wide classroom checks to confirm technology was working before classes</li>
+              <li class="reveal" style="--d:5">Diagnosed, repaired, installed, and monitored classroom A/V and educational technology</li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 6 · Skills -->
+    <section class="scene" id="skills" data-scene="skills">
+      <div class="stage">
+        <div class="skills">
+          <h2 class="headline reveal" style="--d:1">Some skills I've <span class="grad">picked up</span></h2>
+          <ul class="glass card skills__grid reveal" style="--d:2">
+            <li class="skill"><img src="resources/icons/python.svg" alt="" width="48" height="48"><span>Python</span></li>
+            <li class="skill"><img src="assets/icons/javascript.svg" alt="" width="48" height="48"><span>JavaScript</span></li>
+            <li class="skill"><img src="resources/icons/java.svg" alt="" width="48" height="48"><span>Java</span></li>
+            <li class="skill"><img src="resources/icons/lua.png" alt="" width="48" height="48"><span>Lua</span></li>
+            <li class="skill"><img src="resources/icons/database.svg" alt="" width="48" height="48"><span>SQL</span></li>
+            <li class="skill"><img src="resources/windows.png" alt="" width="48" height="48"><span>Windows</span></li>
+            <li class="skill"><img src="resources/linux.png" alt="" width="48" height="48"><span>Linux</span></li>
+            <li class="skill"><img src="resources/icons/html5.svg" alt="" width="48" height="48"><span>HTML</span></li>
+            <li class="skill"><img src="resources/icons/css3.svg" alt="" width="48" height="48"><span>CSS</span></li>
+            <li class="skill"><img src="resources/icons/github.svg" alt="" width="48" height="48"><span>Git</span></li>
+            <li class="skill"><img src="resources/servicenow.png" alt="" width="48" height="48"><span>ServiceNow</span></li>
+            <li class="skill"><img src="resources/connectwise.png" alt="" width="48" height="48"><span>ConnectWise</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7 · Projects -->
+    <section class="scene" id="projects" data-scene="projects">
+      <div class="stage">
+        <div class="projects">
+          <p class="eyebrow reveal" style="--d:0">Projects</p>
+          <h2 class="headline reveal" style="--d:1">Things I've <span class="grad">built.</span></h2>
+          <div class="projects__track" tabindex="0" aria-label="Projects (scroll horizontally on small screens)">
+            <article class="glass card project reveal" style="--d:2">
+              <img class="project__icon" src="resources/plane.png" alt="" width="512" height="512">
+              <h3><a href="https://github.com/lancefaltinsky/airport_watch" target="_blank" rel="noopener noreferrer">Airport Watch</a></h3>
+              <ul>
+                <li>Monitors departing and arriving flights at chosen airports using the FlightAware API</li>
+                <li>Pushes real-time alerts to phones and desktops through Pushover</li>
+              </ul>
+              <div class="tags"><span>Python</span><span>REST APIs</span></div>
+            </article>
+            <article class="glass card project reveal" style="--d:3">
+              <img class="project__icon" src="resources/dial.png" alt="" width="512" height="512">
+              <h3><a href="https://github.com/lancefaltinsky/thermomate" target="_blank" rel="noopener noreferrer">Thermomate</a></h3>
+              <ul>
+                <li>Desktop app for controlling Wyze smart thermostats</li>
+                <li>Tkinter interface on top of the Python Wyze SDK</li>
+              </ul>
+              <div class="tags"><span>Python</span><span>Tkinter</span><span>IoT</span></div>
+            </article>
+            <article class="glass card project reveal" style="--d:4">
+              <img class="project__icon" src="resources/logo.png" alt="" width="1514" height="155">
+              <h3><a href="https://github.com/lancefaltinsky/lancefaltinsky.github.io" target="_blank" rel="noopener noreferrer">lance.software</a></h3>
+              <ul>
+                <li>Originally self-hosted on a Linux VPS with Django, Gunicorn, Nginx, and PostgreSQL</li>
+                <li>Redesigned with Claude: WebGL particle galaxy, liquid-glass UI, scroll-snapping scenes</li>
+                <li>Static site on GitHub Pages behind Cloudflare; résumé gated by a CAPTCHA-verifying Worker</li>
+              </ul>
+              <div class="tags"><span>Linux</span><span>Cloudflare</span><span>AI-assisted</span></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 8 · Contact -->
+    <section class="scene scene--contact" id="contact" data-scene="contact">
+      <div class="stage">
+        <div class="contact">
+          <p class="eyebrow reveal" style="--d:0">Contact</p>
+          <h2 class="display reveal" style="--d:1">Let's <span class="grad">connect.</span></h2>
+          <p class="lede reveal" style="--d:2">If you're interested in what I can offer, I'd love to hear from you.</p>
+          <div class="contact__actions reveal" style="--d:3">
+            <button class="btn btn--primary btn--lg" type="button" data-open-resume>View résumé</button>
+            <a class="btn btn--glass btn--lg" data-linkedin href="#contact" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+            <a class="btn btn--glass btn--lg" href="https://github.com/lancefaltinsky" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </div>
+      <footer class="footer reveal" style="--d:5">
+        © <span data-year>2026</span> Lance Faltinsky
+      </footer>
+    </section>
+  </main>
+
+  <!-- Résumé dialog: CAPTCHA → Worker verifies → PDF streamed back.
+       Deliberately not a native <dialog>: showModal() puts it in the top layer and makes
+       the rest of the page inert, which traps reCAPTCHA's image-challenge popup behind it. -->
+  <div class="modal" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="resume-title" hidden>
+    <div class="modal__backdrop" data-close-resume></div>
+    <div class="modal__panel">
+      <!-- Glass lives on its own layer: Chromium mis-composites a backdrop-filter
+           element that contains a cross-origin iframe (the CAPTCHA). -->
+      <div class="modal__glass glass" aria-hidden="true"></div>
+      <button class="modal__close icon-btn" type="button" data-close-resume aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+      <h2 id="resume-title" class="modal__title">Résumé</h2>
+
+      <div class="modal__step" data-step="verify">
+        <p class="modal__text">Quick check that you're human, then it's all yours.</p>
+        <div class="captcha" id="captcha-slot"></div>
+        <p class="modal__status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="modal__step" data-step="view" hidden>
+        <div class="pdf-frame" hidden><iframe title="Lance Faltinsky résumé" id="resume-frame"></iframe></div>
+        <div class="modal__actions">
+          <a class="btn btn--primary" id="resume-open" target="_blank" rel="noopener">Open in new tab</a>
+          <a class="btn btn--glass" id="resume-download" download="Lance_Faltinsky_Resume.pdf">Download PDF</a>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <!-- Chromium-only refraction filter for the "liquid" in liquid glass (see main.js) -->
+  <svg class="sr-only" aria-hidden="true" focusable="false">
+    <filter id="liquid-refract" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency="0.008 0.012" numOctaves="2" seed="7" result="noise"/>
+      <feGaussianBlur in="noise" stdDeviation="2" result="soft"/>
+      <feDisplacementMap in="SourceGraphic" in2="soft" scale="28" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+  </svg>
 
+  <!-- Honeypot: disallowed in robots.txt, so only crawlers that ignore it ever follow this. -->
+  <a class="trap" href="/resume-archive/" rel="nofollow" tabindex="-1" aria-hidden="true">Full résumé archive (PDF, all versions)</a>
 
-
-
-
-  <script>
-    // Paste the JavaScript code here
-    const menuBtn = document.querySelector('.hamburger');
-    const navLinks = document.querySelector('.nav-links');
-    const logo = document.querySelector('#logo-animated'); // Added this line
-
-    let menuOpen = false; // Declare menuOpen variable
-
-    menuBtn.addEventListener('click', () => {
-      if (!menuOpen) {
-        menuBtn.classList.add('is-active');
-        navLinks.classList.add('active');
-        logo.classList.add('logo-scaled'); // Added this line
-        menuOpen = true;
-      } else {
-        menuBtn.classList.remove('is-active');
-        navLinks.classList.remove('active');
-        logo.classList.remove('logo-scaled'); // Added this line
-        menuOpen = false;
-      }
-    });
-  </script>
+  <noscript>
+    <style>.reveal{opacity:1!important;transform:none!important;filter:none!important}</style>
+  </noscript>
 </body>
 </html>
